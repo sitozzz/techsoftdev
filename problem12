@@ -1,0 +1,27 @@
+#include<iostream>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+	int num = 0;
+	int n = 1;
+	int tr;
+	setlocale(LC_ALL, "RUSSIAN");
+	while (num <= 500)
+	{
+		n++;
+		num = 0;
+		tr = n*(n + 1) / 2;
+		for (int i = 1; i <= sqrt(tr); i++)
+			if ((tr%i) == 0)
+				num++;
+		num *= 2;
+		if (double(sqrt(tr)) == sqrt(tr))
+			num--;
+	}
+	cout << "первое треугольное число, у которого более пяти делителей " << tr << ".\n";
+	system("PAUSE");
+	return 0;
+}
