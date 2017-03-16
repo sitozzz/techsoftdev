@@ -1,0 +1,17 @@
+#include <iostream>
+#include<conio.h>
+using namespace std;
+int main() {
+	int length = 1001;
+	int value = 1;
+	int sum = 1;
+	setlocale(LC_ALL, "RUSSIAN");
+	for (int k = 1; k <= (length - 1) / 2; k++) {
+		for (int i = 0; i < 4; i++) {
+			value += 2 * k;
+			sum += value;
+		}
+	}
+	cout << "сумма чисел в диагоналях спирали 1001 на 1001 равна " << sum << endl;
+	system("pause");
+}
