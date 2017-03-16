@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	long long n = 600851475143;
+	int i = 2;
+	int max = (long int)sqrt((long double)n);
+	do
+	{
+		if (n%i == 0)
+		{
+			n /= i;
+			max = (long int)sqrt((long double)n);
+		}
+		else ++i;
+	} while (i <= max);
+	cout << n ;
+	system("pause");
+	return 0;
+}
