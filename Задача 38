@@ -1,0 +1,19 @@
+searcher=[]
+num=9
+for i in range(10000):
+    strN=''
+    j=1
+    while len(list(strN))<=9:
+        Num = num * j
+        strN = strN + str(Num)
+        j=j+1
+        if '9' in strN and '8' in strN and '7' in strN and '6' in strN and '5' in strN and '4' in strN and '3' in strN and '2' in strN and '1' in strN and len(list(strN))==9:
+            searcher.append(strN)
+
+    num=num+1
+maxNum=0
+for number in searcher:
+    if int(number) > maxNum:
+        maxNum = int(num)
+print(maxNum)        
+    
