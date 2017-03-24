@@ -3,9 +3,9 @@ import cgi
 from random import *
 
 #Создаем массив из 25 числел
-dig = [x for x in range(25)]
+z = [x for x in range(25)]
 #Перемешиваем их случайным образом
-shuffle(dig)
+shuffle(z)
 #Выводим таблицу
 print("Content-type: text/html\n")
 
